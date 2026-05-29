@@ -1,0 +1,88 @@
+<svg width="720" height="900" viewBox="0 0 720 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="110" y1="0" x2="610" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#16110E"/>
+      <stop offset="1" stop-color="#090A0F"/>
+    </linearGradient>
+    <linearGradient id="skin" x1="260" y1="120" x2="460" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F6C7A2"/>
+      <stop offset="1" stop-color="#C98C67"/>
+    </linearGradient>
+    <linearGradient id="shirt" x1="220" y1="280" x2="500" y2="620" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F2EEE8"/>
+      <stop offset="1" stop-color="#BCC0C6"/>
+    </linearGradient>
+    <linearGradient id="plaidRed" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#9D2D2A"/>
+      <stop offset="1" stop-color="#5B1716"/>
+    </linearGradient>
+    <linearGradient id="plaidDark" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#242021"/>
+      <stop offset="1" stop-color="#6A6665"/>
+    </linearGradient>
+    <linearGradient id="shorts" x1="240" y1="500" x2="480" y2="740" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7F8A97"/>
+      <stop offset="1" stop-color="#4C5663"/>
+    </linearGradient>
+    <linearGradient id="shoe" x1="230" y1="650" x2="490" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#C7CDD4"/>
+    </linearGradient>
+    <linearGradient id="glasses" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#18273B"/>
+      <stop offset="1" stop-color="#0A1019"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="720" height="900" rx="42" fill="url(#bg)"/>
+  <rect x="70" y="70" width="580" height="760" rx="34" fill="#0B1020" stroke="rgba(255,213,90,0.12)" stroke-width="2"/>
+  <path d="M78 810C160 758 248 736 360 736C472 736 560 758 642 810" stroke="rgba(255,213,90,0.12)" stroke-width="8" stroke-linecap="round"/>
+
+  <g transform="translate(154 122)">
+    <ellipse cx="212" cy="46" rx="122" ry="20" fill="rgba(255,213,90,0.1)"/>
+    <path d="M134 28H278V78H134V28Z" fill="#D6B03A"/>
+    <path d="M144 18H268L284 40H128L144 18Z" fill="#B1841D"/>
+    <path d="M126 40H290L274 62H142L126 40Z" fill="#7E5A10"/>
+
+    <path d="M164 84C176 72 190 66 212 66C234 66 248 72 260 84V140C248 152 234 158 212 158C190 158 176 152 164 140V84Z" fill="url(#skin)"/>
+    <circle cx="192" cy="108" r="9" fill="url(#glasses)"/>
+    <circle cx="232" cy="108" r="9" fill="url(#glasses)"/>
+    <rect x="198" y="104" width="20" height="10" rx="5" fill="url(#glasses)"/>
+    <path d="M176 132C190 140 226 140 240 132" stroke="#A56C55" stroke-width="6" stroke-linecap="round"/>
+
+    <path d="M108 106C122 92 138 84 152 84C160 84 166 88 170 94L166 168L124 164L112 126L108 106Z" fill="url(#skin)"/>
+    <path d="M286 106C272 92 256 84 242 84C234 84 228 88 224 94L228 168L270 164L282 126L286 106Z" fill="url(#skin)"/>
+    <path d="M96 160C108 150 120 146 132 148C140 150 146 156 148 166L134 238L94 232L74 188L96 160Z" fill="url(#skin)"/>
+    <path d="M290 160C278 150 266 146 254 148C246 150 240 156 238 166L252 238L292 232L312 188L290 160Z" fill="url(#skin)"/>
+
+    <path d="M118 170C126 154 144 144 166 144H258C280 144 298 154 306 170L294 318L256 398H138L102 318L118 170Z" fill="url(#shirt)" stroke="#1D1D1E" stroke-width="6"/>
+    <path d="M116 186L150 220L124 246L94 216L116 186Z" fill="url(#plaidDark)"/>
+    <path d="M158 186L194 222L164 252L132 220L158 186Z" fill="url(#plaidRed)"/>
+    <path d="M200 186L236 222L206 252L174 220L200 186Z" fill="url(#plaidDark)"/>
+    <path d="M242 186L278 222L248 252L216 220L242 186Z" fill="url(#plaidRed)"/>
+    <path d="M124 230L158 264L132 290L96 256L124 230Z" fill="url(#plaidRed)"/>
+    <path d="M168 230L202 264L176 290L140 256L168 230Z" fill="url(#plaidDark)"/>
+    <path d="M212 230L246 264L220 290L184 256L212 230Z" fill="url(#plaidRed)"/>
+    <path d="M254 230L288 264L262 290L226 256L254 230Z" fill="url(#plaidDark)"/>
+
+    <path d="M132 398C150 392 170 388 186 388H202V522H144L120 470L132 398Z" fill="url(#shorts)" stroke="#1B232D" stroke-width="6"/>
+    <path d="M210 398H224C240 398 260 402 280 410L294 470L270 522H210V398Z" fill="url(#shorts)" stroke="#1B232D" stroke-width="6"/>
+    <path d="M146 426H188V494H136L126 466L146 426Z" fill="#65707D"/>
+    <path d="M224 426H266V494H214L204 466L224 426Z" fill="#65707D"/>
+    <rect x="152" y="458" width="34" height="12" rx="6" fill="#9EB0C3"/>
+    <rect x="230" y="458" width="34" height="12" rx="6" fill="#9EB0C3"/>
+
+    <path d="M106 522H166L180 634H120L92 600L106 522Z" fill="#A77E5A" stroke="#1D1D1E" stroke-width="6"/>
+    <path d="M246 522H306L320 600L292 634H232L246 522Z" fill="#A77E5A" stroke="#1D1D1E" stroke-width="6"/>
+    <path d="M110 634H186L194 674H96L110 634Z" fill="url(#shoe)" stroke="#1D1D1E" stroke-width="6"/>
+    <path d="M224 634H300L314 674H210L224 634Z" fill="url(#shoe)" stroke="#1D1D1E" stroke-width="6"/>
+    <path d="M98 662H194" stroke="#D64B3A" stroke-width="10" stroke-linecap="round"/>
+    <path d="M214 662H320" stroke="#D64B3A" stroke-width="10" stroke-linecap="round"/>
+
+    <path d="M98 214L64 258L88 310L116 286L114 236L98 214Z" fill="#D7B18D" stroke="#1D1D1E" stroke-width="6"/>
+    <path d="M286 214L320 258L296 310L268 286L270 236L286 214Z" fill="#D7B18D" stroke="#1D1D1E" stroke-width="6"/>
+  </g>
+
+  <rect x="244" y="676" width="232" height="74" rx="26" fill="#11192C" stroke="rgba(255,213,90,0.2)" stroke-width="2"/>
+  <text x="360" y="721" fill="#F8E8C7" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" text-anchor="middle" letter-spacing="4">PLAYER K-21</text>
+</svg>
