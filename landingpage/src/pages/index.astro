@@ -1,0 +1,170 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+	<main class="hero">
+		<div class="backdrop-grid"></div>
+		<div class="glow glow-one"></div>
+		<div class="glow glow-two"></div>
+		<div class="glow glow-three"></div>
+		<div class="frame frame-top"></div>
+		<div class="frame frame-bottom"></div>
+		<section class="card">
+			<div class="badge-row">
+				<span class="badge">ARENA MODE</span>
+				<span class="badge badge-alt">ROBOTIC BRAWL</span>
+			</div>
+			<p class="eyebrow">Reverse It Games Presents</p>
+			<h1>Reverse It: Evil</h1>
+			<p class="subcopy">A high-energy battle arena where mechanical kids compete under cold lights and heavy steel.</p>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.hero {
+		min-height: 100vh;
+		display: grid;
+		place-items: center;
+		position: relative;
+		overflow: hidden;
+		background:
+			radial-gradient(circle at 50% 25%, rgba(81, 182, 255, 0.2), transparent 26%),
+			radial-gradient(circle at 20% 80%, rgba(255, 74, 166, 0.18), transparent 24%),
+			linear-gradient(180deg, #020409 0%, #060b14 45%, #020308 100%);
+		padding: 2rem;
+	}
+
+	.backdrop-grid {
+		position: absolute;
+		inset: 0;
+		background-image:
+			linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+			linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+		background-size: 72px 72px;
+		mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 88%);
+		opacity: 0.18;
+	}
+
+	.card {
+		position: relative;
+		z-index: 1;
+		text-align: center;
+		padding: 2.5rem 1.75rem;
+		max-width: 1200px;
+		backdrop-filter: blur(6px);
+	}
+
+	.badge-row {
+		display: flex;
+		gap: 0.75rem;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-bottom: 1.25rem;
+	}
+
+	.badge {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.5rem 0.9rem;
+		border: 1px solid rgba(124, 247, 255, 0.45);
+		border-radius: 999px;
+		background: rgba(6, 14, 28, 0.72);
+		color: #aef3ff;
+		font-size: 0.8rem;
+		letter-spacing: 0.28em;
+		text-transform: uppercase;
+		box-shadow: 0 0 24px rgba(0, 194, 255, 0.08);
+	}
+
+	.badge-alt {
+		border-color: rgba(255, 114, 197, 0.42);
+		color: #ffc0eb;
+	}
+
+	.eyebrow {
+		margin: 0 0 1rem;
+		font-size: clamp(0.9rem, 1.8vw, 1.1rem);
+		letter-spacing: 0.42em;
+		text-transform: uppercase;
+		color: rgba(230, 245, 255, 0.76);
+	}
+
+	h1 {
+		margin: 0;
+		font-size: clamp(3.5rem, 11vw, 9rem);
+		line-height: 0.95;
+		font-weight: 900;
+		letter-spacing: -0.09em;
+		text-wrap: balance;
+		background:
+			linear-gradient(180deg, #ffffff 0%, #d9f8ff 24%, #89e7ff 48%, #ff9ae3 72%, #ffffff 100%);
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+		text-shadow:
+			0 0 24px rgba(139, 231, 255, 0.12),
+			0 0 64px rgba(255, 154, 227, 0.1);
+		filter: saturate(1.1);
+	}
+
+	.subcopy {
+		max-width: 56rem;
+		margin: 1.25rem auto 0;
+		color: rgba(214, 226, 235, 0.82);
+		font-size: clamp(1rem, 2vw, 1.3rem);
+		line-height: 1.6;
+		letter-spacing: 0.01em;
+	}
+
+	.glow {
+		position: absolute;
+		border-radius: 999px;
+		filter: blur(90px);
+		opacity: 0.75;
+		pointer-events: none;
+	}
+
+	.glow-one {
+		width: 28rem;
+		height: 28rem;
+		background: rgba(0, 194, 255, 0.16);
+		top: 12%;
+		left: 12%;
+	}
+
+	.glow-two {
+		width: 24rem;
+		height: 24rem;
+		background: rgba(255, 86, 181, 0.18);
+		bottom: 10%;
+		right: 8%;
+	}
+
+	.glow-three {
+		width: 16rem;
+		height: 16rem;
+		background: rgba(185, 255, 102, 0.12);
+		top: 44%;
+		right: 22%;
+	}
+
+	.frame {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		width: min(78vw, 1120px);
+		height: 1px;
+		background: linear-gradient(90deg, transparent, rgba(124, 247, 255, 0.85), rgba(255, 255, 255, 0.2), rgba(255, 124, 217, 0.8), transparent);
+		opacity: 0.7;
+	}
+
+	.frame-top {
+		top: 11%;
+	}
+
+	.frame-bottom {
+		bottom: 11%;
+	}
+</style>
