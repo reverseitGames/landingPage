@@ -268,7 +268,55 @@ import humanArena from '../assets/human.webp';
 	}
 
 	.kit-embed-inline {
-		min-height: 320px;
+		min-height: 420px;
+		display: block;
+		width: 100%;
+		color: #f6fbff;
+	}
+
+	.kit-embed-inline :global(iframe) {
+		display: block;
+		width: 100%;
+		min-height: 420px;
+		border: 0;
+	}
+
+	.kit-embed-inline :global(form) {
+		display: grid;
+		gap: 0.85rem;
+		width: 100%;
+	}
+
+	.kit-embed-inline :global(label) {
+		display: block;
+		color: rgba(246, 250, 255, 0.92);
+		font-size: 0.95rem;
+		line-height: 1.4;
+	}
+
+	.kit-embed-inline :global(input),
+	.kit-embed-inline :global(select),
+	.kit-embed-inline :global(textarea) {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0.95rem 1rem;
+		border-radius: 12px;
+		border: 1px solid rgba(124, 247, 255, 0.28);
+		background: rgba(3, 6, 12, 0.9);
+		color: #f6fbff;
+	}
+
+	.kit-embed-inline :global(button) {
+		padding: 0.95rem 1.1rem;
+		border-radius: 999px;
+		border: 1px solid rgba(124, 247, 255, 0.38);
+		background: linear-gradient(180deg, rgba(124, 247, 255, 0.16), rgba(255, 154, 227, 0.12));
+		color: #f6fbff;
+		font: inherit;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		cursor: pointer;
 	}
 
 	.slot {
