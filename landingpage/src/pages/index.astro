@@ -20,10 +20,12 @@ import humanArena from '../assets/human.webp';
 					<p class="signup-label">Get updates</p>
 					<h2>Join the Reverse It: Evil list</h2>
 					<p>
-						Sign up for launch news, playtest invites, and release updates in the signup overlay.
+						Sign up for launch news, playtest invites, and release updates
 					</p>
 				</div>
-				<button class="cta-button" type="button" data-open-signup>Open signup form</button>
+				<div class="kit-embed kit-embed-inline" aria-live="polite">
+					<script async data-uid="e6a35db5c8" src="https://reverse-it-games.kit.com/e6a35db5c8/index.js"></script>
+				</div>
 			</div>
 		</section>
 		<section class="arena" aria-label="Arena characters animation">
@@ -52,61 +54,6 @@ import humanArena from '../assets/human.webp';
 		</section>
 	</main>
 
-	<div class="signup-overlay" data-signup-overlay hidden>
-		<div class="signup-backdrop" data-close-signup></div>
-		<section class="signup-modal" role="dialog" aria-modal="true" aria-labelledby="signup-title">
-			<button class="signup-close" type="button" aria-label="Close signup form" data-close-signup>
-				×
-			</button>
-			<div class="signup-copy modal-copy">
-				<p class="signup-label">Get updates</p>
-				<h2 id="signup-title">Join the Reverse It: Evil list</h2>
-				<p>
-					Sign up for launch news, playtest invites, and release updates.
-				</p>
-			</div>
-			<div class="kit-embed kit-embed-modal" aria-live="polite" data-kit-mount></div>
-		</section>
-	</div>
-
-	<script is:inline>
-		const overlay = document.querySelector('[data-signup-overlay]');
-		const openButtons = document.querySelectorAll('[data-open-signup]');
-		const closeButtons = document.querySelectorAll('[data-close-signup]');
-		const kitMount = document.querySelector('[data-kit-mount]');
-		let kitLoaded = false;
-
-		const loadKitEmbed = () => {
-			if (kitLoaded || !kitMount) return;
-
-			const script = document.createElement('script');
-			script.async = true;
-			script.dataset.uid = 'e6a35db5c8';
-			script.src = 'https://reverse-it-games.kit.com/e6a35db5c8/index.js';
-			kitMount.appendChild(script);
-			kitLoaded = true;
-		};
-
-		const openOverlay = () => {
-			if (!overlay) return;
-			overlay.hidden = false;
-			document.body.classList.add('signup-open');
-			loadKitEmbed();
-		};
-
-		const closeOverlay = () => {
-			if (!overlay) return;
-			overlay.hidden = true;
-			document.body.classList.remove('signup-open');
-		};
-
-		openButtons.forEach((button) => button.addEventListener('click', openOverlay));
-		closeButtons.forEach((button) => button.addEventListener('click', closeOverlay));
-
-		document.addEventListener('keydown', (event) => {
-			if (event.key === 'Escape' && !overlay?.hidden) closeOverlay();
-		});
-	</script>
 </Layout>
 
 <style>
@@ -209,27 +156,6 @@ import humanArena from '../assets/human.webp';
 		font-size: clamp(0.96rem, 1.35vw, 1.05rem);
 		line-height: 1.6;
 		color: rgba(246, 250, 255, 0.9);
-	}
-
-	.cta-button {
-		position: relative;
-		z-index: 1;
-		margin-top: 1rem;
-		padding: 0.9rem 1.2rem;
-		border: 1px solid rgba(124, 247, 255, 0.38);
-		border-radius: 999px;
-		background: linear-gradient(180deg, rgba(124, 247, 255, 0.16), rgba(255, 154, 227, 0.12));
-		color: #f6fbff;
-		font: inherit;
-		font-weight: 700;
-		letter-spacing: 0.08em;
-		text-transform: uppercase;
-		cursor: pointer;
-		box-shadow: 0 12px 30px rgba(0, 0, 0, 0.24);
-	}
-
-	.cta-button:hover {
-		filter: brightness(1.08);
 	}
 
 	.arena {
@@ -340,58 +266,8 @@ import humanArena from '../assets/human.webp';
 		width: 100%;
 	}
 
-	.signup-overlay {
-		position: fixed;
-		inset: 0;
-		z-index: 50;
-		display: grid;
-		place-items: center;
-		padding: 1rem;
-	}
-
-	.signup-backdrop {
-		position: absolute;
-		inset: 0;
-		background: rgba(1, 3, 7, 0.78);
-		backdrop-filter: blur(10px);
-	}
-
-	.signup-modal {
-		position: relative;
-		z-index: 1;
-		width: min(720px, 94vw);
-		max-height: min(88vh, 920px);
-		overflow: auto;
-		padding: 1.5rem;
-		border-radius: 20px;
-		border: 1px solid rgba(255, 154, 227, 0.24);
-		background:
-			linear-gradient(180deg, rgba(8, 11, 19, 0.98), rgba(4, 6, 11, 0.98)),
-			radial-gradient(circle at top center, rgba(255, 154, 227, 0.14), transparent 45%);
-		box-shadow: 0 30px 90px rgba(0, 0, 0, 0.55);
-	}
-
-	.signup-close {
-		position: absolute;
-		top: 0.85rem;
-		right: 0.9rem;
-		width: 2.4rem;
-		height: 2.4rem;
-		border: 1px solid rgba(255, 255, 255, 0.16);
-		border-radius: 999px;
-		background: rgba(255, 255, 255, 0.04);
-		color: #fff;
-		font-size: 1.5rem;
-		line-height: 1;
-		cursor: pointer;
-	}
-
-	body.signup-open {
-		overflow: hidden;
-	}
-
-	.kit-embed-modal {
-		min-height: 280px;
+	.kit-embed-inline {
+		min-height: 240px;
 	}
 
 	.slot {
@@ -564,10 +440,6 @@ import humanArena from '../assets/human.webp';
 
 		.hero-cta {
 			padding: 1rem 1rem 1.1rem;
-		}
-
-		.signup-modal {
-			padding: 1.1rem;
 		}
 	}
 
