@@ -65,9 +65,7 @@ import humanArena from '../assets/human.webp';
 					Sign up for launch news, playtest invites, and release updates.
 				</p>
 			</div>
-			<div class="kit-embed kit-embed-modal" aria-live="polite">
-				<script async data-uid="e6a35db5c8" src="https://reverse-it-games.kit.com/e6a35db5c8/index.js"></script>
-			</div>
+			<div class="kit-embed kit-embed-modal" aria-live="polite" data-kit-mount></div>
 		</section>
 	</div>
 
@@ -75,11 +73,25 @@ import humanArena from '../assets/human.webp';
 		const overlay = document.querySelector('[data-signup-overlay]');
 		const openButtons = document.querySelectorAll('[data-open-signup]');
 		const closeButtons = document.querySelectorAll('[data-close-signup]');
+		const kitMount = document.querySelector('[data-kit-mount]');
+		let kitLoaded = false;
+
+		const loadKitEmbed = () => {
+			if (kitLoaded || !kitMount) return;
+
+			const script = document.createElement('script');
+			script.async = true;
+			script.dataset.uid = 'e6a35db5c8';
+			script.src = 'https://reverse-it-games.kit.com/e6a35db5c8/index.js';
+			kitMount.appendChild(script);
+			kitLoaded = true;
+		};
 
 		const openOverlay = () => {
 			if (!overlay) return;
 			overlay.hidden = false;
 			document.body.classList.add('signup-open');
+			loadKitEmbed();
 		};
 
 		const closeOverlay = () => {
