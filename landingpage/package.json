@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "astro": "^6.4.2",
+    "playwright": "^1.60.0",
     "tailwindcss": "^4.3.0"
   }
 }
